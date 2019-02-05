@@ -157,4 +157,9 @@ and then
 
 **If Some script is missing or not found**
 
-> Try this : npm install npm@latest -g
+> Try to delete and re install the node module folder : "sudo rm -rf node_modules && sudo npm i --save" 
+and don't forget the"sudo audit fix"
+
+**Npm start for web preview doesn't work ?**
+
+> Remplace the start script whit this : "node node_modules/react-scripts/scripts/start.js"
