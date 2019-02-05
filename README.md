@@ -155,11 +155,14 @@ and then
 
 > Delete folder "ansi-html" in node-modules
 
-**If Some script is missing or not found**
+**If Some script, commande is missing or not found**
 
 > Try to delete and re install the node module folder : "sudo rm -rf node_modules && sudo npm i --save" 
 and don't forget the"sudo audit fix"
+> Or if it's the electron-packager : npm install electron-packager --save
 
 **Npm start for web preview doesn't work ?**
 
 > Remplace the start script whit this : "node node_modules/react-scripts/scripts/start.js"
+
+**You need to close the app before package it again**
