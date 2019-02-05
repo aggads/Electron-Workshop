@@ -37,7 +37,7 @@ Small Work shop about Electron
 
 ### Config
 
-**In package.json add this script**
+**In package.json add these script**
 
 - package mac
 > "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds --darwinDarkModeSupport=true",
