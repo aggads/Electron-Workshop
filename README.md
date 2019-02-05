@@ -27,7 +27,7 @@ Small Work shop about Electron
 **Electron api demo**
 ---
 #### Clone this repository
->git clone https://github.com/crilleengvall/electron-tutorial-app.git
+>git clone https://github.com/electron/electron-api-demos
 #### Go into the repository
 >cd electron-api-demos
 #### Install dependencies
