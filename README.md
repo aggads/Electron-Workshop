@@ -155,3 +155,6 @@ and then
 
 > Delete folder "ansi-html" in node-modules
 
+**If Some script is missing or not found**
+
+> Try this : npm install npm@latest -g
