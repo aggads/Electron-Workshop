@@ -5,8 +5,9 @@ Small Work shop about Electron
 
 - [Installation](#installation)
 - [Boilerplates](#boilerplates)
-- [Tools](#tools)
 - [Components](#components)
+- [Config](#config)
+- [Bug](#bug)
 
 
 ## Installation
@@ -15,9 +16,9 @@ Small Work shop about Electron
 **Electron**
 ---
 ##### Clone this repository
->git clone https://github.com/electron/electron-quick-start
+>git clone https://github.com/csepulv/electron-with-create-react-app.git
 #### Go into the repository
->cd electron-quick-start
+>cd electron-with-create-react-app
 #### Install dependencies
 >npm install
 #### Run the app
@@ -26,13 +27,37 @@ Small Work shop about Electron
 **Electron api demo**
 ---
 #### Clone this repository
->git clone https://github.com/electron/electron-api-demos
+>git clone https://github.com/crilleengvall/electron-tutorial-app.git
 #### Go into the repository
 >cd electron-api-demos
 #### Install dependencies
 >npm install
 ##### Run the app
 >npm start
+
+### Config
+
+**In package.json add this script**
+
+> "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds --darwinDarkModeSupport=true",
+    "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "create-debian-installer": "electron-installer-debian --src release-builds/electron-tutorial-app-linux-x64/ --arch amd64 --config debian.json"
+
+**and replace the start script with this (if you want to run the app)
+
+> "start": "electron ."
+
+**Don't forget, if you want to see the modification in the app of the css style, you need to build it before**
+
+> "build": "react-scripts build",
+
+
+
+#### Package the app
+> npm run "win" or "mac" or "linux"
 
 
 ## Boilerplates
@@ -63,4 +88,62 @@ Small Work shop about Electron
 - [titlebar](https://github.com/kapetan/titlebar) - Emulate the macOS window titlebar.
 - [Brightwheel](https://github.com/loranallensmith/brightwheel) - Build and manage UI components with Photon and Etch.
 - [Xel](https://xel-toolkit.org) - Widget toolkit for building native-like apps.
+
+## Awesome Electron 
+
+> https://github.com/sindresorhus/awesome-electron#components
+
+## Tuto Electron
+
+> https://www.christianengvall.se/category/electron/
+
+## Here is somes exemple of what you can do whit Electron
+
+> https://electronjs.org/apps
+
+## Tips
+
+- Sudo on cmd Windows
+
+>https://www.parlonsgeek.com/sudo-sous-windows/
+
+
+
+#Bug 
+---
+
+*Have you install Electron ?*
+
+> npm install --save-dev electron 
+
+**Have you install Electron-packager ?*
+
+for use in npm scripts
+> npm install electron-packager --save-dev
+
+for use from cli
+> npm install electron-packager -g
+
+**You need to build before run electron**
+> npm run build
+
+and then 
+
+> npm start
+
+**rcedit.exe failed with exit code 193. wine: Bad EXE format**
+
+> sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32
+
+**Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/electron/.electron' **
+
+> sudo npm install -g electron --unsafe-perm=true --allow-root
+
+**(electron:3541): Gtk-WARNING **: 12:29:39.100: cannot open display:**
+
+> Add : "start": "electron ."  in script, in your package.json
+
+**If the package-win script doesn't work, try this:**
+
+> Delete folder "ansi-html" in node-modules
 
