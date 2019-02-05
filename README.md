@@ -66,6 +66,9 @@ Small Work shop about Electron
 #### Package the app
 > npm run "package-win" or "package-mac" or "package-linux"
 
+# Update the app
+
+> See the doc : https://electronjs.org/docs/tutorial/updates
 
 ## Boilerplates
 
