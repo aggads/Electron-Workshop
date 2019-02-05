@@ -21,13 +21,15 @@ Small Work shop about Electron
 >cd electron-with-create-react-app
 #### Install dependencies
 >npm install
-#### Run the app
+#### Run the preview
 >npm start
+#### Run the app
+>npm electron
 
 **Electron api demo**
 ---
 #### Clone this repository
->git clone https://github.com/crilleengvall/electron-tutorial-app.git
+>git clone https://github.com/electron/electron-api-demos
 #### Go into the repository
 >cd electron-api-demos
 #### Install dependencies
@@ -54,9 +56,6 @@ Small Work shop about Electron
     
 > "create-debian-installer": "electron-installer-debian --src release-builds/electron-tutorial-app-linux-x64/ --arch amd64 --config debian.json"
 
-**and replace the start script with this (if you want to run the app)**
-
-> "start": "electron ."
 
 **Don't forget, if you want to see the modification in the app of the css style, you need to build it before**
 
@@ -65,7 +64,7 @@ Small Work shop about Electron
 
 
 #### Package the app
-> npm run "win" or "mac" or "linux"
+> npm run "package-win" or "package-mac" or "package-linux"
 
 
 ## Boilerplates
@@ -117,7 +116,7 @@ Small Work shop about Electron
 
 
 
-#Bug 
+# Bug 
 ---
 
 *Have you install Electron ?*
@@ -155,3 +154,14 @@ and then
 
 > Delete folder "ansi-html" in node-modules
 
+**If Some script, commande is missing or not found**
+
+> Try to delete and re install the node module folder : "sudo rm -rf node_modules && sudo npm i --save" 
+and don't forget the"sudo audit fix"
+> Or if it's the electron-packager : npm install electron-packager --save
+
+**Npm start for web preview doesn't work ?**
+
+> Remplace the start script whit this : "node node_modules/react-scripts/scripts/start.js"
+
+**You need to close the app before package it again**
