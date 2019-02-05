@@ -21,8 +21,10 @@ Small Work shop about Electron
 >cd electron-with-create-react-app
 #### Install dependencies
 >npm install
-#### Run the app
+#### Run the preview
 >npm start
+#### Run the app
+>npm electron
 
 **Electron api demo**
 ---
@@ -54,9 +56,6 @@ Small Work shop about Electron
     
 > "create-debian-installer": "electron-installer-debian --src release-builds/electron-tutorial-app-linux-x64/ --arch amd64 --config debian.json"
 
-**and replace the start script with this (if you want to run the app)**
-
-> "start": "electron ."
 
 **Don't forget, if you want to see the modification in the app of the css style, you need to build it before**
 
@@ -65,7 +64,7 @@ Small Work shop about Electron
 
 
 #### Package the app
-> npm run "win" or "mac" or "linux"
+> npm run "package-win" or "package-mac" or "package-linux"
 
 
 ## Boilerplates
