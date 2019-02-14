@@ -149,7 +149,7 @@ and then
 
 > 	sudo npm install -g electron --unsafe-perm=true --allow-root
 
-**(electron:3541): Gtk-WARNING **: 12:29:39.100: cannot open display:**
+**(electron:3541): Gtk-WARNING** **  **: 12:29:39.100: cannot open display:**
 
 > Add : "start": "electron ."  in script, in your package.json
 (or run it whit cmd windows)
