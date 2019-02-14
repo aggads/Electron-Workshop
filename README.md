@@ -207,4 +207,6 @@ and don't forget the"sudo audit fix"
 
 **You need to close the app before package it again**
 
-Return to the start => [Content](#content)
+Return to the start =>
+
+-[Content](#content)
