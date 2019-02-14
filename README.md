@@ -122,11 +122,11 @@ Small Work shop about Electron
 # Bug 
 ---
 
-*Have you install Electron ?*
+**Have you install Electron ?**
 
 > 	npm install --save-dev electron 
 
-**Have you install Electron-packager ?*
+**Have you install Electron-packager ?**
 
 for use in npm scripts
 > 	npm install electron-packager --save-dev
@@ -145,7 +145,7 @@ and then
 
 > 	sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32
 
-**Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/electron/.electron' **
+**Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/electron/.electron'**
 
 > 	sudo npm install -g electron --unsafe-perm=true --allow-root
 
