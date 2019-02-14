@@ -42,11 +42,11 @@ Small Work shop about Electron
 **In package.json add these script**
 
 - package mac
-> "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds --darwinDarkModeSupport=true",
+> "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --prune=true --out=release-builds --darwinDarkModeSupport=true",
 - package windows    
-> "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
+> "package-win": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron Tutorial App\"",
  - package linux
- > "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+ > "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --prune=true --out=release-builds",
  
    `Optionnal`
    
@@ -124,30 +124,30 @@ Small Work shop about Electron
 
 *Have you install Electron ?*
 
-> npm install --save-dev electron 
+> 	npm install --save-dev electron 
 
 **Have you install Electron-packager ?*
 
 for use in npm scripts
-> npm install electron-packager --save-dev
+> 	npm install electron-packager --save-dev
 
 for use from cli
-> npm install electron-packager -g
+> 	npm install electron-packager -g
 
 **You need to build before run electron**
-> npm run build
+> 	npm run build
 
 and then 
 
-> npm start
+> 	npm start
 
 **rcedit.exe failed with exit code 193. wine: Bad EXE format**
 
-> sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32
+> 	sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install wine32
 
 **Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/electron/.electron' **
 
-> sudo npm install -g electron --unsafe-perm=true --allow-root
+> 	sudo npm install -g electron --unsafe-perm=true --allow-root
 
 **(electron:3541): Gtk-WARNING **: 12:29:39.100: cannot open display:**
 
@@ -166,5 +166,34 @@ and don't forget the"sudo audit fix"
 **Npm start for web preview doesn't work ?**
 
 > Remplace the start script whit this : "node node_modules/react-scripts/scripts/start.js"
+
+**Update each node dependency**
+
+> 	npm install -g npm-check-updates
+	ncu -u
+	npm install 
+
+**Error while loading shared libraries: libnss3.so**
+
+> 	sudo apt install libnss3-dev 
+
+**Error while loading shared libraries: libgtk-3**
+
+> 	sudo dpkg --add-architecture i386
+	sudo apt update && apt upgrade
+	sudo apt install libgtk-3-0:i386
+
+**Error while loading shared libraries: libXss.so.1**
+
+>	sudo apt-get install libxss1
+
+**Error while loading shared libraries: libasound.so.2**
+
+>	sudo apt-get install libasound2
+
+**Have you the last version of npm ?**
+
+>	sudo npm install -g npm@latest
+
 
 **You need to close the app before package it again**
