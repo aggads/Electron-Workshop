@@ -50,7 +50,7 @@ Small Work shop about Electron
  
    `Optionnal`
    
-> "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+> "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite",
 
 > "create-installer-win": "node installers/windows/createinstaller.js",
     
@@ -152,6 +152,7 @@ and then
 **(electron:3541): Gtk-WARNING **: 12:29:39.100: cannot open display:**
 
 > Add : "start": "electron ."  in script, in your package.json
+(or run it whit cmd windows)
 
 **If the package-win script doesn't work, try this:**
 
