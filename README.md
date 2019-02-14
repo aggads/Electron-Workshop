@@ -126,6 +126,10 @@ Small Work shop about Electron
 
 ### Have you tried to turn off and on again ?
 
+---
+
+#### And then, try this:
+
 **Have you install Electron ?**
 
 > 	npm install --save-dev electron 
